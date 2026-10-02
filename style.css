@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  color: #172033;
+}
+
+header {
+  background: #0b1220;
+  color: white;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #00b7ff;
+}
+
+.hospital {
+  font-size: 14px;
+  opacity: .85;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+.card-title {
+  color: #697386;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.amount {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.panel {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+.panel h2 {
+  margin-bottom: 18px;
+}
+
+form {
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d7dce5;
+  border-radius: 9px;
+  font-size: 15px;
+  background: white;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+button {
+  border: none;
+  border-radius: 9px;
+  padding: 13px;
+  background: #007bff;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button:hover {
+  opacity: .9;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.export-btn {
+  background: #168a52;
+  width: auto;
+}
+
+.search {
+  margin: 15px 0;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background: #f7f8fa;
+}
+
+.delete-btn {
+  background: #dc3545;
+  padding: 7px 10px;
+  font-size: 13px;
+}
+
+.empty {
+  text-align: center;
+  padding: 25px;
+  color: #777;
+}
+
+@media (max-width: 700px) {
+
+  header {
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .hospital {
+    font-size: 12px;
+  }
+
+  main {
+    padding: 12px;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .panel {
+    padding: 15px;
+  }
+
+  .history-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .export-btn {
+    width: 100%;
+  }
+}
