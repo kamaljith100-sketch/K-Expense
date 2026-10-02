@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1220">
+  <title>K-Expense | D-Care Hospital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">K-<span>Expense</span></div>
+  <div class="hospital">D-Care Hospital</div>
+</header>
+
+<main>
+
+  <section class="dashboard">
+    <div class="card">
+      <div class="card-title">Today</div>
+      <div class="amount" id="todayTotal">₹0.00</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">This Month</div>
+      <div class="amount" id="monthTotal">₹0.00</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Total Expenses</div>
+      <div class="amount" id="grandTotal">₹0.00</div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Add Expense</h2>
+
+    <form id="expenseForm">
+
+      <label>Date</label>
+      <input type="date" id="date" required>
+
+      <label>Category</label>
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option>Medicines</option>
+        <option>Medical Equipment</option>
+        <option>Laboratory</option>
+        <option>Food & Kitchen</option>
+        <option>Cleaning</option>
+        <option>Electricity</option>
+        <option>Water</option>
+        <option>Maintenance</option>
+        <option>Staff Expenses</option>
+        <option>Office Expenses</option>
+        <option>Transportation</option>
+        <option>Pharmacy</option>
+        <option>Other</option>
+      </select>
+
+      <label>Description</label>
+      <input
+        type="text"
+        id="description"
+        placeholder="Expense description"
+        required
+      >
+
+      <label>Amount</label>
+      <input
+        type="number"
+        id="amount"
+        placeholder="₹ Amount"
+        min="0"
+        step="0.01"
+        required
+      >
+
+      <label>Payment Method</label>
+      <select id="payment">
+        <option>Cash</option>
+        <option>UPI</option>
+        <option>Bank Transfer</option>
+        <option>Card</option>
+        <option>Other</option>
+      </select>
+
+      <label>Bill / Invoice No.</label>
+      <input
+        type="text"
+        id="bill"
+        placeholder="Optional"
+      >
+
+      <label>Notes</label>
+      <textarea
+        id="notes"
+        placeholder="Additional notes"
+      ></textarea>
+
+      <button type="submit">➕ Add Expense</button>
+
+    </form>
+  </section>
+
+  <section class="panel">
+
+    <div class="history-header">
+      <h2>Expense History</h2>
+
+      <button id="exportBtn" class="export-btn">
+        📥 Export CSV
+      </button>
+    </div>
+
+    <input
+      type="text"
+      id="search"
+      class="search"
+      placeholder="🔎 Search expenses..."
+    >
+
+    <div class="table-container">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Payment</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="expenseList"></tbody>
+
+      </table>
+
+    </div>
+
+    <div id="emptyMessage" class="empty">
+      No expenses added yet.
+    </div>
+
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+  </html>
